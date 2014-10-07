@@ -1,0 +1,10 @@
+#!/bin/bash
+
+read MovieFolder
+current_dir=$(pwd)
+
+
+cd $MovieFolder
+ls -R | egrep -i ".avi|.mkv|.mp4" > $current_dir/../data/movielist.txt
+
+python $current_dir/../services/fetcher.py $current_dir

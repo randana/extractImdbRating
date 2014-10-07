@@ -1,0 +1,18 @@
+#!/bin/sh
+
+read movie_folder
+current_dir=$(pwd)
+#echo $current_dir
+#echo $movie_folder
+cd $movie_folder 
+#echo cd $movie_folder
+ls -R | (grep ".avi" -i || grep ".mkv" -i)  > $current_dir/movielist.txt
+
+#ls -R >movielist.txt
+python $current_dir/teststatic.py $search_url $current_dir
+
+#for line in $(cat $current_dir/movielist.txt); do echo "$line" ;
+#search_url="http://www.imdb.com/find?ref_=nv_sr_fn&q=$line&s=all"
+
+#python $current_dir/teststatic.py $search_url
+#done;

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+read F1
+#F1='echo $F | sed s/\ /+/g'
+search_url="http://www.imdb.com/find?ref_=nv_sr_fn&q=$F1&s=all"
+#echo $search_url
+python betweenimdbandfind.py $search_url

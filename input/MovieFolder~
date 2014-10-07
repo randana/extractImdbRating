@@ -1,0 +1,10 @@
+#!/bin/bash
+
+read MovieFolder
+current_dir=$(pwd)
+
+
+cd $MovieFolder
+ls -R | (grep ".avi" -i || grep ".mkv" -i || grep ".mp4" -i)  #> $current_dir/../data/movielist.txt
+
+python $current_dir/../services/fetcher.py $current_dir

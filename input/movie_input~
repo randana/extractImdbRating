@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Enter 1 For Movie and 2 For MovieFolder"
+
+read inputType
+if  "$inputType" = "1" 
+then
+	./Movie
+fi
+
+if "$inputType" = "2" 
+then
+	./MovieFolder
+fi

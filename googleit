@@ -1,0 +1,8 @@
+#!/bin/sh
+
+read F1
+F=`echo $F1 | sed s/\ /+/g`
+#read p1
+#p1 = 'echo $p1 | sed s/\ /+/g'
+#open "http://www.imdb.com/find?ref_=nv_sr_fn&q=$p1&s=all"
+open "http://google.com/search?q=$F"
